@@ -1,0 +1,8 @@
+DOTFILES_INSTALL_DIR="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+
+# load all source files
+source $DOTFILES_INSTALL_DIR/alias
+
+
+DOTFILES_BIN_PATH="$(realpath $DOTFILES_INSTALL_DIR/../bin)"
+PATH=$PATH:$DOTFILES_BIN_PATH

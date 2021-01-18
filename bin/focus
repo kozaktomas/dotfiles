@@ -7,4 +7,3 @@ else
     echo "Open app first"
 fi
 
-return 0
