@@ -1,0 +1,10 @@
+#!/bin/bash
+if [ `wmctrl -l -x | grep -c "$1"` != 0 ]  
+then
+    echo $1
+    wmctrl -ia $(wmctrl -l -x | grep "$1" | awk '{print $1}')
+else
+    echo "Open app first"
+fi
+
+return 0
