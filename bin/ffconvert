@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for i in *.MTS;
+  do name=`echo "$i" | cut -d'.' -f1`
+  echo "$name"
+  ffmpeg -i "$i" -vcodec libx265 -crf 28 "${name}.mp4"
+done
