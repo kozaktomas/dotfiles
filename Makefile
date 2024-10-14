@@ -27,4 +27,7 @@ apps-config:
 	- @echo "Install git"
 	- cp -r $(DOTFILES_DIR)/apps/git/.gitconfig ~/.gitconfig
 	- cp -r $(DOTFILES_DIR)/apps/git/.gitignore ~/.gitignore
+	- @echo "Install terraform"
+	- cp -r $(DOTFILES_DIR)/apps/terraform/.terraformrc ~/.terraformrc
+	- mkdir -p ~/.terraform.d/plugin-cache
 
