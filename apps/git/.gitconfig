@@ -1,0 +1,12 @@
+[user]
+	name = Tomas Kozak
+	email = kozak@talko.cz
+[init]
+	defaultBranch = main
+[alias]
+	st = status
+	co = checkout
+	dh = diff HEAD
+	lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate=full
+[core]
+	excludesfile = ~/.gitignore

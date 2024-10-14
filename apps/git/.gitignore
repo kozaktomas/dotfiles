@@ -1,0 +1,45 @@
+.idea/
+.internal/
+.tom/
+.DS_Store
+.env
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Javascript
+.npm/
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+
+
+# Terraform
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.tfstate.lock.info
+.terraformrc
+terraform.rc
+
+# PHP
+composer.phar
+/vendor/

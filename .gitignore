@@ -1,2 +1,3 @@
 install/Brewfile.lock.json
+install/Caskfile.lock.json
 bin/kafe
