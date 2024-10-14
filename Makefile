@@ -16,6 +16,7 @@ osx-brew-cask: brew
 mas:
 	mas install 441258766  # Magnet
 	mas install 1475387142 # Tailscale
+	mas install 424389933  # Final Cut Pro
 
 upgrade:
 	- @echo "Going to upgrade all packages"
