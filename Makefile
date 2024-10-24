@@ -17,6 +17,8 @@ mas:
 	mas install 441258766  # Magnet
 	mas install 1475387142 # Tailscale
 	mas install 424389933  # Final Cut Pro
+	mas install 310633997  # Whatsapp
+	mas install 1452453066 # Hidden bar
 
 upgrade:
 	- @echo "Going to upgrade all packages"
