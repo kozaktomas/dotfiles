@@ -19,6 +19,7 @@ mas:
 	mas install 424389933  # Final Cut Pro
 	mas install 310633997  # Whatsapp
 	mas install 1452453066 # Hidden bar
+	mas install 1362171212 # Caffeinated
 
 upgrade:
 	- @echo "Going to upgrade all packages"
