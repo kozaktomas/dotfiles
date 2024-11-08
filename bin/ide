@@ -34,7 +34,7 @@ for i in "${SPEC[@]}"; do
   # if required file exists, open app with project
   if test -f "$project/$file" ; then
     open -na "$app.app" --args "$project"
-    exit 1
+    exit 0
   fi
 done
 
