@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# declare variable with current working directory
+project=$(pwd)
+
+# append first argument to current working directory
+if [ $# -eq 1 ]
+  then
+    project=$project/$1
+fi
+
+# PHP
+if [ ! -d "$project/composer.json" ]; then
+  open -na "PhpStorm.app" --args "$project"
+  exit 1
+fi
+
+# Node.js
+if [ ! -f "$project/package.json" ]; then
+  open -na "WebStorm.app" --args "$project"
+  exit 1
+fi
+
+# Ruby
+if [ ! -f "$project/Gemfile" ]; then
+  open -na "RubyMine.app" --args "$project"
+  exit 1
+fi
+
+# Python
+if [ ! -f "$project/requirements.txt" ]; then
+  open -na "PyCharm.app" --args "$project"
+  exit 1
+fi
+
+# default GoLand
+open -na "GoLand.app" --args "$project"
