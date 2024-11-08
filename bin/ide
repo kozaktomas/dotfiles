@@ -1,5 +1,18 @@
 #!/bin/bash
 
+# program opens project in IDE based on project language
+# language is determined by the presence of a specific file
+
+SPEC=(
+  "go.mod GoLand"
+  "composer.json PhpStorm"
+  "package.json WebStorm"
+  "Gemfile RubyMine"
+  "requirements.txt PyCharm"
+  "index.html WebStorm"
+  "terraform.tf GoLand"
+)
+
 # declare variable with current working directory
 project=$(pwd)
 
@@ -7,31 +20,23 @@ project=$(pwd)
 if [ $# -eq 1 ]
   then
     project=$project/$1
+  else
+    echo "No project specified"
+    exit 1
 fi
 
-# PHP
-if [ ! -d "$project/composer.json" ]; then
-  open -na "PhpStorm.app" --args "$project"
-  exit 1
-fi
+for i in "${SPEC[@]}"; do
+  # split string into array
+  read -ra parts <<< "${i}"
+  file="${parts[0]}"
+  app="${parts[1]}"
 
-# Node.js
-if [ ! -f "$project/package.json" ]; then
-  open -na "WebStorm.app" --args "$project"
-  exit 1
-fi
-
-# Ruby
-if [ ! -f "$project/Gemfile" ]; then
-  open -na "RubyMine.app" --args "$project"
-  exit 1
-fi
-
-# Python
-if [ ! -f "$project/requirements.txt" ]; then
-  open -na "PyCharm.app" --args "$project"
-  exit 1
-fi
+  # if required file exists, open app with project
+  if test -f "$project/$file" ; then
+    open -na "$app.app" --args "$project"
+    exit 1
+  fi
+done
 
 # default GoLand
 open -na "GoLand.app" --args "$project"
