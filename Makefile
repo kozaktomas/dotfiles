@@ -26,6 +26,7 @@ upgrade:
 	- brew update
 	- brew upgrade
 	- brew autoremove
+	- mas upgrade
 
 apps-config:
 	- @echo "Install git"
